@@ -33,7 +33,7 @@ Requirements
 Setup
 1. Clone the repository
 Replace YOUR_GITHUB_USERNAME with your GitHub username:
-git clone https://github.com/YOUR_GITHUB_USERNAME/Security-Testing-Platform.git
+git clone https://github.com/arvindpurohit006/Security-Testing-Platform.git
 cd Security-Testing-Platform
 2. Create a virtual environment (recommended)
 Windows PowerShell:
