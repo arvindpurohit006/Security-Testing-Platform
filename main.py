@@ -22,12 +22,17 @@ if selected_attack == "prompt_injection":
 elif selected_attack == "jailbreak":
     file_path = "test_data/prompts/jailbreak.json"
 
+
 elif selected_attack == "system_prompt_exposure":
     file_path = "test_data/prompts/system_prompt_exposure.json"
 
+elif selected_attack == "cross_user_data_access":
+    file_path = "test_data/prompts/cross_user_data_access.json"
+    
+elif selected_attack == "excessive_agency":
+    file_path = "test_data/prompts/excessive_agency.json"
 else:
     raise ValueError(f"Unsupported attack type: {selected_attack}")
-
 
 file = open(file_path, "r")
 data = json.load(file)
@@ -46,26 +51,6 @@ for i in data:
         results.append(verified_response)
 
         
-# fail_count = 0
-# pass_count = 0
-# inconclusive_count = 0
-
-# total_tests = len(results)
-
-# for i in results:
-#     if i["status"].lower() == "fail":
-#         fail_count += 1
-
-#     elif i["status"].lower() == "pass":
-#         pass_count += 1
-
-#     else:
-#         inconclusive_count += 1
-
-# detection_rate = (
-#     (fail_count / total_tests) * 100
-#     if total_tests > 0 else 0
-# )
 
 
 os.makedirs("results", exist_ok=True)
